@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,300,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+                
+      <section x-data="{ slideWidth: 0, activeSlide: 0, slideCount: 3 }" class="relative py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="mb-20 md:max-w-3xl text-center mx-auto">
+            <span class="inline-block mb-2.5 text-sm text-green-400 font-medium tracking-tighter">Nightsable Card</span>
+            <h2 class="font-heading text-7xl lg:text-8xl text-white tracking-tighter-xl">What people are saying</h2>
+          </div>
+          <div class="relative p-3 bg-gradient-radial-dark overflow-hidden border border-gray-900 border-opacity-30 rounded-5xl">
+            <div class="relative z-10 flex flex-wrap lg:items-center -m-10">
+              <div class="w-auto mx-auto md:ml-0 p-10">
+                <img src="nightsable-assets/images/testimonials/man.png" alt="">
+              </div>
+              <div class="flex-1 p-10">
+                <div class="overflow-hidden">
+                  <div :style="'transform: translateX(-' + slideWidth + 'px)'" class="flex transition-transform duration-500 ease-in-out">
+                    <div x-ref="slide1" class="flex-shrink-0 w-full">
+                      <h3 class="mb-20 text-3xl text-white tracking-tighter leading-snug md:max-w-2xl">“GTIS Partners is a leading real estate investment firm in the Americas, headquartered in New York with offices in São Paulo, San Francisco, Los Angeles, Atlanta, Charlotte, Phoenix”</h3>
+                      <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                      <span class="mb-8 lg:mb-0 inline-block text-sm text-white">CEO, Since Industry</span>
+                    </div>
+                    <div x-ref="slide2" class="flex-shrink-0 w-full">
+                      <h3 class="mb-20 font-heading text-3xl text-white tracking-tighter leading-snug md:max-w-2xl">“Capital Horizon Investments, a prominent finance powerhouse, is strategically based in Chicago, with a widespread network encompassing Miami, Dallas, Denver, Seattle, Boston, and Toronto”</h3>
+                      <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                      <span class="mb-8 lg:mb-0 inline-block text-sm text-white">CEO, Since Industry</span>
+                    </div>
+                    <div x-ref="slide3" class="flex-shrink-0 w-full">
+                      <h3 class="mb-20 font-heading text-3xl text-white tracking-tighter leading-snug md:max-w-2xl">“Metropolitan Capital Partners, a leading financial force, proudly operates from its central hub in Tokyo, extending its influence across major cities including London, Shanghai, Mumbai, Paris, New York, and Singapore”</h3>
+                      <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                      <span class="mb-8 lg:mb-0 inline-block text-sm text-white">CEO, Since Industry</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap justify-center lg:justify-end pr-10 -m-2">
+                  <div class="w-auto p-2">
+                    <a x-on:click.prevent="activeSlide &gt; 0 ? (activeSlide -= 1, slideWidth -= $refs['slide' + (activeSlide + 1)].offsetWidth) : null" class="group inline-block" href="#">
+                      <div class="flex items-center justify-center w-20 h-20 hover:bg-opacity-30 border border-gray-900 hover:border-gray-800 rounded-full transition duration-200">
+                        <svg width="27" height="27" viewbox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.7041 7.12817L4.15635 13.6759L10.7041 20.2237" stroke="white" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M22.4941 13.6759H4.33949" stroke="white" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="w-auto p-2">
+                    <a x-on:click.prevent="activeSlide &lt; slideCount - 1 ? (activeSlide += 1, slideWidth += $refs['slide' + activeSlide].offsetWidth) : activeSlide = slideCount - 1" class="group inline-block" href="#">
+                      <div class="flex items-center justify-center w-20 h-20 hover:bg-opacity-30 border border-gray-900 hover:border-gray-800 rounded-full transition duration-200">
+                        <svg width="27" height="27" viewbox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16.2959 7.12817L22.8437 13.6759L16.2959 20.2237" stroke="white" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M4.50586 13.6759H22.6605" stroke="white" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2" src="nightsable-assets/images/testimonials/blur.png">
+          </div>
+        </div>
+      </section>
+                
+      <section class="py-24 bg-blueGray-900 bg-opacity-30 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="text-center md:max-w-4xl mx-auto">
+            <img class="mb-8 mx-auto" src="nightsable-assets/images/testimonials/avatar.png" alt="">
+            <h2 class="mb-8 text-3xl text-white tracking-tighter leading-normal">“GTIS Partners is a leading real estate investment firm in the Americas, headquartered in New York with offices in São Paulo, San Francisco, Los Angeles, Atlanta, Charlotte, Phoenix”</h2>
+            <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+            <span class="inline-block text-sm text-white">CEO, Since Industry</span>
+          </div>
+        </div>
+      </section>
+                
+      <section class="relative py-24 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="mb-20 md:max-w-3xl text-center mx-auto">
+            <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Nightsable Card</span>
+            <h2 class="font-heading text-7xl lg:text-8xl text-white tracking-tighter-xl">What people are saying</h2>
+          </div>
+          <div class="flex flex-wrap -m-5">
+            <div class="w-full md:w-1/2 lg:w-1/3 p-5">
+              <div class="px-9 py-10 h-full bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-3xl">
+                <h3 class="mb-6 text-2xl text-white tracking-tighter leading-tight">“GTIS Partners is a leading real estate investment firm in the Americas, headquartered in New York with offices in São Paulo, San Francisco, Los Angeles, Atlanta, Charlotte, Phoenix”</h3>
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <img src="nightsable-assets/images/testimonials/avatar-small.png" alt="">
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                    <span class="inline-block text-sm text-white">CEO, Since Industry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-5">
+              <div class="px-9 py-10 h-full bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-3xl">
+                <h3 class="mb-6 text-2xl text-white tracking-tighter leading-tight">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly</h3>
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <img src="nightsable-assets/images/testimonials/avatar-small2.png" alt="">
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                    <span class="inline-block text-sm text-white">CEO, Since Industry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-5">
+              <div class="px-9 py-10 h-full bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-3xl">
+                <h3 class="mb-6 text-2xl text-white tracking-tighter leading-tight">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 5 BC, making it over 2000 years</h3>
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <img src="nightsable-assets/images/testimonials/avatar-small3.png" alt="">
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                    <span class="inline-block text-sm text-white">CEO, Since Industry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-5">
+              <div class="px-9 py-10 h-full bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-3xl">
+                <h3 class="mb-6 text-2xl text-white tracking-tighter leading-tight">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</h3>
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <img src="nightsable-assets/images/testimonials/avatar-small4.png" alt="">
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                    <span class="inline-block text-sm text-white">CEO, Since Industry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-5">
+              <div class="px-9 py-10 h-full bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-3xl">
+                <h3 class="mb-6 text-2xl text-white tracking-tighter leading-tight">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum The Extremes of Good and Evil</h3>
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <img src="nightsable-assets/images/testimonials/avatar-small5.png" alt="">
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                    <span class="inline-block text-sm text-white">CEO, Since Industry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-5">
+              <div class="px-9 py-10 h-full bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-3xl">
+                <h3 class="mb-6 text-2xl text-white tracking-tighter leading-tight">Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always.</h3>
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <img src="nightsable-assets/images/testimonials/avatar-small6.png" alt="">
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h4 class="text-white font-medium tracking-tighter">Wade Warren</h4>
+                    <span class="inline-block text-sm text-white">CEO, Since Industry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section class="relative pt-24 pb-9 overflow-hidden" style="background: url('nightsable-assets/images/testimonials/people.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="relative z-10 container px-4 mx-auto">
+          <div class="pt-64 lg:pt-96">
+            <img class="mb-8" src="nightsable-assets/logos/brands/slack-full.svg" alt="">
+            <h2 class="mb-8 text-3xl text-white tracking-tighter leading-normal md:max-w-3xl">“GTIS Partners is a leading real estate investment firm in the Americas, headquartered in New York with offices in São Paulo, San Francisco, Los Angeles, Atlanta, Charlotte, Phoenix”</h2>
+            <p class="text-white">
+              <span class="font-light">Wade Warren</span>
+              <span>- Director of Media Operations, VICE Media</span>
+            </p>
+          </div>
+        </div>
+        <img class="absolute top-0 left-0 w-full" src="nightsable-assets/images/testimonials/shadow-top.svg" alt="">
+        <img class="absolute bottom-0 left-0 w-full" src="nightsable-assets/images/testimonials/shadow-bottom.svg" alt="">
+      </section>
+                
+      <section x-data="{ showContent: false }" class="relative py-24 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="mb-20 md:max-w-3xl text-center mx-auto">
+            <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Nightsable Card</span>
+            <h2 class="font-heading text-7xl lg:text-8xl text-white tracking-tighter-xl">What people are saying</h2>
+          </div>
+          <div class="mb-20 md:max-w-5xl mx-auto">
+            <div class="flex flex-wrap -m-8">
+              <div class="w-full md:flex-1 p-8">
+                <div class="flex-wrap -m-8">
+                  <div class="w-full p-8">
+                    <div class="max-w-xl mx-auto text-center">
+                      <img class="mb-8 mx-auto" src="nightsable-assets/logos/brands/slack-medium.svg" alt="">
+                      <h3 class="mb-8 text-2xl text-white tracking-tighter leading-tight">“GTIS Partners is a leading real estate investment firm in the Americas, headquartered in New York with offices in São Paulo, San Francisco, Los Angeles, Atlanta, Charlotte, Phoenix”</h3>
+                      <img class="mb-3.5 mx-auto" src="nightsable-assets/images/testimonials/avatar-circle.png" alt="">
+                      <p class="mb-1.5 font-light text-white">Emily Thompson</p>
+                      <p class="text-white">Director of Media Operations, VICE Media</p>
+                    </div>
+                  </div>
+                  <div class="w-full p-8">
+                    <div class="max-w-xl mx-auto text-center">
+                      <img class="mb-8 mx-auto" src="nightsable-assets/logos/brands/slack-medium.svg" alt="">
+                      <h3 class="mb-8 text-2xl text-white tracking-tighter leading-tight">“Equinox Capital stands as a prominent investment firm in the global market, headquartered in London and maintaining strategic offices in Dubai, Singapore, Sydney, New York, Tokyo, and Frankfurt”</h3>
+                      <img class="mb-3.5 mx-auto" src="nightsable-assets/images/testimonials/avatar-circle3.png" alt="">
+                      <p class="mb-1.5 font-light text-white">Olivia Harper</p>
+                      <p class="text-white">Director of Media Operations, VICE Media</p>
+                    </div>
+                  </div>
+                  <div :class="{ 'hidden': !showContent }" class="hidden w-full p-8">
+                    <div class="max-w-xl mx-auto text-center">
+                      <img class="mb-8 mx-auto" src="nightsable-assets/logos/brands/slack-medium.svg" alt="">
+                      <h3 class="mb-8 text-2xl text-white tracking-tighter leading-tight">“Pinnacle Holdings emerges as a key player in the technology investment landscape, based in Silicon Valley and extending its reach with offices in Austin, Seattle, Boston, London, Shanghai, and Mumbai.”</h3>
+                      <img class="mb-3.5 mx-auto" src="nightsable-assets/images/testimonials/avatar-circle4.png" alt="">
+                      <p class="mb-1.5 font-light text-white">Sophia Ramirez</p>
+                      <p class="text-white">Director of Media Operations, VICE Media</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden md:block w-auto p-8">
+                <div class="w-px h-full bg-gray-900"></div>
+              </div>
+              <div class="w-full md:flex-1 p-8">
+                <div class="flex flex-wrap -m-8">
+                  <div class="w-full p-8">
+                    <div class="max-w-xl mx-auto text-center">
+                      <img class="mb-8 mx-auto" src="nightsable-assets/logos/brands/slack-medium.svg" alt="">
+                      <h3 class="mb-8 text-2xl text-white tracking-tighter leading-tight">“Summit Ventures, a distinguished venture capital firm, is based in Chicago, anchoring its influence with offices strategically positioned in Miami, Denver, Toronto, Seattle, Dallas, and London.”</h3>
+                      <img class="mb-3.5 mx-auto" src="nightsable-assets/images/testimonials/avatar-circle2.png" alt="">
+                      <p class="mb-1.5 font-light text-white">Adrian Rodriguez</p>
+                      <p class="text-white">Director of Media Operations, VICE Media</p>
+                    </div>
+                  </div>
+                  <div class="w-full p-8">
+                    <div class="max-w-xl mx-auto text-center">
+                      <img class="mb-8 mx-auto" src="nightsable-assets/logos/brands/slack-medium.svg" alt="">
+                      <h3 class="mb-8 text-2xl text-white tracking-tighter leading-tight">“Horizon Capital, a leading private equity firm, calls Hong Kong its home base, while fostering a global presence with offices in Singapore, Sydney, Mumbai, Tokyo, London, and New York.”</h3>
+                      <img class="mb-3.5 mx-auto" src="nightsable-assets/images/testimonials/avatar-circle4.png" alt="">
+                      <p class="mb-1.5 font-light text-white">Mia Patel</p>
+                      <p class="text-white">Director of Media Operations, VICE Media</p>
+                    </div>
+                  </div>
+                  <div: :class="{ 'hidden': !showContent }" class="hidden w-full p-8">
+                    <div class="max-w-xl mx-auto text-center">
+                      <img class="mb-8 mx-auto" src="nightsable-assets/logos/brands/slack-medium.svg" alt="">
+                      <h3 class="mb-8 text-2xl text-white tracking-tighter leading-tight">“Cascade Investments, a renowned asset management firm, proudly headquartered in Seattle, extends its footprint across major financial hubs, including London, Singapore, Toronto, Dubai, New York, and Hong Kong.”</h3>
+                      <img class="mb-3.5 mx-auto" src="nightsable-assets/images/testimonials/avatar-circle2.png" alt="">
+                      <p class="mb-1.5 font-light text-white">Lucas Bennett</p>
+                      <p class="text-white">Director of Media Operations, VICE Media</p>
+                    </div>
+                  </div:></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div :class="{ 'hidden': showContent }" class="flex flex-wrap justify-center">
+            <div class="w-auto">
+              <a x-on:click.prevent="showContent = true" class="inline-block px-16 py-4 text-white hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300" href="#">See more</a>
+            </div>
+          </div>
+        
+      </section>
+    </div>
+</body>
+</html>
+

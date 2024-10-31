@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,300,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+                
+      <section x-data="{ showContent: false, active: 'all' }" class="py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="md:max-w-4xl text-center mx-auto">
+            <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Nightsable Card</span>
+            <h2 class="font-heading mb-12 text-7xl lg:text-8xl text-white tracking-7xl lg:tracking-8xl">Open positions</h2>
+            <div class="flex flex-wrap justify-center mb-12">
+              <div class="w-auto"><a x-on:click.prevent="active = 'all'" :class="{'text-green-400 border-green-400': active === 'all', 'text-gray-300 border-transparent': active !== 'all'}" class="inline-block py-5 px-8 text-green-400 font-medium border-2 border-green-400 rounded-full" href="#">All</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'design'" :class="{'text-green-400 border-green-400': active === 'design', 'text-gray-300 border-transparent': active !== 'design'}" class="inline-block py-5 px-8 text-gray-300 font-medium border-2 border-transparent rounded-full" href="#">Design</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'software-engineering'" :class="{'text-green-400 border-green-400': active === 'software-engineering', 'text-gray-300 border-transparent': active !== 'software-engineering'}" class="inline-block py-5 px-8 text-gray-300 font-medium border-2 border-transparent rounded-full" href="#">Software Engineering</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'customer-success'" :class="{'text-green-400 border-green-400': active === 'customer-success', 'text-gray-300 border-transparent': active !== 'customer-success'}" class="inline-block py-5 px-8 text-gray-300 font-medium border-2 border-transparent rounded-full" href="#">Customer Success</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'sales'" :class="{'text-green-400 border-green-400': active === 'sales', 'text-gray-300 border-transparent': active !== 'sales'}" class="inline-block py-5 px-8 text-gray-300 font-medium border-2 border-transparent rounded-full" href="#">Sales</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'marketing'" :class="{'text-green-400 border-green-400': active === 'marketing', 'text-gray-300 border-transparent': active !== 'marketing'}" class="inline-block py-5 px-8 text-gray-300 font-medium border-2 border-transparent rounded-full" href="#">Marketing</a></div>
+            </div>
+          </div>
+          <div class="relative max-w-5xl mx-auto overflow-hidden mb-20">
+            <div class="flex flex-wrap -m-2">
+              <div x-show="active === 'marketing' || active === 'all'" class="w-full p-2">
+                <div class="p-12 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center -m-2">
+                    <div class="w-full md:flex-1 p-2">
+                      <ul class="flex flex-wrap mb-3 -m-2">
+                        <li class="flex flex-wrap items-center p-2">
+                          <span class="mr-4 text-sm text-green-400">Marketing</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex flex-wrap items-center text-gray-300 p-2">
+                          <span class="mr-4 text-sm text-gray-300">Remote</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="text-sm text-gray-300 p-2">Full Time</li>
+                      </ul>
+                      <a class="group inline-block mb-4" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl hover:underline">Product Manager, Instagram Camera</h3>
+                      </a>
+                      <p class="text-gray-300 md:max-w-sm">Nightsable is a strategic branding agency focused on brand creation, rebrands, and brand</p>
+                    </div>
+                    <div class="w-full md:w-auto p-2">
+                      <a class="flex md:justify-end" href="#">
+                        <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.79688 17.43L13.5019 11.725C14.1756 11.0512 14.1756 9.94873 13.5019 9.27498L7.79688 3.56998" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div x-show="active === 'customer-success' || active === 'all'" class="w-full p-2">
+                <div class="p-12 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center -m-2">
+                    <div class="w-full md:flex-1 p-2">
+                      <ul class="flex flex-wrap mb-3 -m-2">
+                        <li class="flex flex-wrap items-center p-2">
+                          <span class="mr-4 text-sm text-green-400">Customer Success</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex flex-wrap items-center text-gray-300 p-2">
+                          <span class="mr-4 text-sm text-gray-300">Remote</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="text-sm text-gray-300 p-2">Full Time</li>
+                      </ul>
+                      <a class="group inline-block mb-4" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl hover:underline">Research Director</h3>
+                      </a>
+                      <p class="text-gray-300 md:max-w-sm">Nightsable is a strategic branding agency focused on brand creation, rebrands, and brand</p>
+                    </div>
+                    <div class="w-full md:w-auto p-2">
+                      <a class="flex md:justify-end" href="#">
+                        <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.79688 17.43L13.5019 11.725C14.1756 11.0512 14.1756 9.94873 13.5019 9.27498L7.79688 3.56998" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div x-show="active === 'marketing' || active === 'all'" class="w-full p-2">
+                <div class="p-12 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center -m-2">
+                    <div class="w-full md:flex-1 p-2">
+                      <ul class="flex flex-wrap mb-3 -m-2">
+                        <li class="flex flex-wrap items-center p-2">
+                          <span class="mr-4 text-sm text-green-400">Marketing</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex flex-wrap items-center text-gray-300 p-2">
+                          <span class="mr-4 text-sm text-gray-300">Remote</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="text-sm text-gray-300 p-2">Full Time</li>
+                      </ul>
+                      <a class="group inline-block mb-4" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl hover:underline">Customer Success Manager</h3>
+                      </a>
+                      <p class="text-gray-300 md:max-w-sm">Nightsable is a strategic branding agency focused on brand creation, rebrands, and brand</p>
+                    </div>
+                    <div class="w-full md:w-auto p-2">
+                      <a class="flex md:justify-end" href="#">
+                        <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.79688 17.43L13.5019 11.725C14.1756 11.0512 14.1756 9.94873 13.5019 9.27498L7.79688 3.56998" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div x-show="active === 'software-engineering' || active === 'all'" class="w-full p-2">
+                <div class="p-12 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center -m-2">
+                    <div class="w-full md:flex-1 p-2">
+                      <ul class="flex flex-wrap mb-3 -m-2">
+                        <li class="flex flex-wrap items-center p-2">
+                          <span class="mr-4 text-sm text-green-400">Software Engineering</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex flex-wrap items-center text-gray-300 p-2">
+                          <span class="mr-4 text-sm text-gray-300">Remote</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="text-sm text-gray-300 p-2">Full Time</li>
+                      </ul>
+                      <a class="group inline-block mb-4" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl hover:underline">Engineering Manager</h3>
+                      </a>
+                      <p class="text-gray-300 md:max-w-sm">Nightsable is a strategic branding agency focused on brand creation, rebrands, and brand</p>
+                    </div>
+                    <div class="w-full md:w-auto p-2">
+                      <a class="flex md:justify-end" href="#">
+                        <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.79688 17.43L13.5019 11.725C14.1756 11.0512 14.1756 9.94873 13.5019 9.27498L7.79688 3.56998" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div x-show="active === 'design' || active === 'all'" class="w-full p-2">
+                <div class="p-12 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center -m-2">
+                    <div class="w-full md:flex-1 p-2">
+                      <ul class="flex flex-wrap mb-3 -m-2">
+                        <li class="flex flex-wrap items-center p-2">
+                          <span class="mr-4 text-sm text-green-400">Design</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex flex-wrap items-center text-gray-300 p-2">
+                          <span class="mr-4 text-sm text-gray-300">Remote</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="text-sm text-gray-300 p-2">Full Time</li>
+                      </ul>
+                      <a class="group inline-block mb-4" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl hover:underline">Product Designer</h3>
+                      </a>
+                      <p class="text-gray-300 md:max-w-sm">Ngihtsable is a strategic branding agency focused on brand creation, rebrands, and brand</p>
+                    </div>
+                    <div class="w-full md:w-auto p-2">
+                      <a class="flex md:justify-end" href="#">
+                        <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.79688 17.43L13.5019 11.725C14.1756 11.0512 14.1756 9.94873 13.5019 9.27498L7.79688 3.56998" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div x-show="showContent &amp;&amp; active === 'marketing' || showContent &amp;&amp; active === 'all'" class="visibility-item w-full p-2">
+                <div class="p-12 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center -m-2">
+                    <div class="w-full md:flex-1 p-2">
+                      <ul class="flex flex-wrap mb-3 -m-2">
+                        <li class="flex flex-wrap items-center p-2">
+                          <span class="mr-4 text-sm text-green-400">Marketing</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex flex-wrap items-center text-gray-300 p-2">
+                          <span class="mr-4 text-sm text-gray-300">Remote</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="text-sm text-gray-300 p-2">Full Time</li>
+                      </ul>
+                      <a class="group inline-block mb-4" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl hover:underline">Manager</h3>
+                      </a>
+                      <p class="text-gray-300 md:max-w-sm">Ngihtsable is a strategic branding agency focused on brand creation, rebrands, and brand</p>
+                    </div>
+                    <div class="w-full md:w-auto p-2">
+                      <a class="flex md:justify-end" href="#">
+                        <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.79688 17.43L13.5019 11.725C14.1756 11.0512 14.1756 9.94873 13.5019 9.27498L7.79688 3.56998" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div x-show="!showContent" class="absolute z-10 left bottom-0 transform rotate-180 bg-gradient-radial-darker w-full h-1/2"></div>
+          </div>
+          <div x-show="!showContent" class="flex flex-wrap justify-center max-w-xs mx-auto mb-6">
+            <div class="w-full">
+              <a x-on:click.prevent="showContent = true" class="block px-14 py-4 text-center font-medium tracking-2xl border-2 border-green-400 bg-green-400 hover:bg-green-500 text-black focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-full transition duration-300" href="#">See all positions</a>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section x-data="{ showContent: false, active: 'all' }" class="py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="md:max-w-4xl text-center mx-auto">
+            <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Nightsable Card</span>
+            <h2 class="font-heading mb-12 text-7xl lg:text-8xl text-white tracking-7xl lg:tracking-8xl">Open positions</h2>
+            <div class="flex flex-wrap justify-center mb-12">
+              <div class="w-auto"><a x-on:click.prevent="active = 'all'" :class="{'text-green-400 border-green-400': active === 'all', 'text-gray-300 border-transparent': active !== 'all'}" class="inline-block py-5 px-8 text-green-400 font-medium border-2 border-green-400 rounded-full" href="#">All</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'design'" :class="{'text-green-400 border-green-400': active === 'design', 'text-gray-300 border-transparent': active !== 'design'}" class="inline-block py-5 px-8 text-gray-300 border-2 border-transparent font-medium rounded-full" href="#">Design</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'software-engineering'" :class="{'text-green-400 border-green-400': active === 'software-engineering', 'text-gray-300 border-transparent': active !== 'software-engineering'}" class="inline-block py-5 px-8 text-gray-300 border-2 border-transparent font-medium rounded-full" href="#">Software Engineering</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'customer-success'" :class="{'text-green-400 border-green-400': active === 'customer-success', 'text-gray-300 border-transparent': active !== 'customer-success'}" class="inline-block py-5 px-8 text-gray-300 border-2 border-transparent font-medium rounded-full" href="#">Customer Success</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'sales'" :class="{'text-green-400 border-green-400': active === 'sales', 'text-gray-300 border-transparent': active !== 'sales'}" class="inline-block py-5 px-8 text-gray-300 border-2 border-transparent font-medium rounded-full" href="#">Sales</a></div>
+              <div class="w-auto"><a x-on:click.prevent="active = 'marketing'" :class="{'text-green-400 border-green-400': active === 'marketing', 'text-gray-300 border-transparent': active !== 'marketing'}" class="inline-block py-5 px-8 text-gray-300 border-2 border-transparent font-medium rounded-full" href="#">Marketing</a></div>
+            </div>
+          </div>
+          <div class="w-full overflow-x-auto overflow-y-hidden mb-20">
+            <div class="flex">
+              <div class="flex-1">
+                <div class="flex flex-wrap">
+                  <div class="flex items-center w-full h-16 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-sm text-gray-300 font-medium">Position</p>
+                  </div>
+                  <div x-show="active === 'marketing' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="mr-3.5 text-2xl min-w-max text-white tracking-2xl hover:underline" href="#">Product Manager, Instagram Camera</a></div>
+                  <div x-show="active === 'customer-success' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="mr-3.5 text-2xl min-w-max text-white tracking-2xl hover:underline" href="#">Research Director</a></div>
+                  <div x-show="active === 'marketing' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="mr-3.5 text-2xl min-w-max text-white tracking-2xl hover:underline" href="#">Customer Success Manager</a></div>
+                  <div x-show="active === 'software-engineering' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="mr-3.5 text-2xl min-w-max text-white tracking-2xl hover:underline" href="#">Engineering Manager</a></div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="mr-3.5 text-2xl min-w-max text-white tracking-2xl hover:underline" href="#">Product Designer</a></div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="mr-3.5 text-2xl min-w-max text-white tracking-2xl hover:underline" href="#">Product Manager, Instagram Camera</a></div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="mr-3.5 text-2xl min-w-max text-white tracking-2xl hover:underline" href="#">Product Manager, Instagram Camera</a></div>
+                  <div x-show="showContent &amp;&amp; active === 'customer-success' || showContent &amp;&amp; active === 'all'" class="visibility-item flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="mr-3.5 text-2xl min-w-max text-white tracking-2xl hover:underline" href="#">Research Director</a></div>
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-wrap">
+                  <div class="flex items-center w-full h-16 px-8 py-6 border-b border-gray-900">
+                    <p class="min-w-max text-sm text-gray-300 font-medium">Departement</p>
+                  </div>
+                  <div x-show="active === 'marketing' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a></div>
+                  <div x-show="active === 'customer-success' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 border-2 border-green-400 rounded-full transition duration-300" href="#">Customer Success</a></div>
+                  <div x-show="active === 'marketing' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a></div>
+                  <div x-show="active === 'software-engineering' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 border-2 border-green-400 rounded-full transition duration-300" href="#">Software Engineering</a></div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a></div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a></div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a></div>
+                  <div x-show="showContent &amp;&amp; active === 'customer-success' || showContent &amp;&amp; active === 'all'" class="visibility-item flex items-center w-full h-20 px-8 py-5 border-b border-gray-900"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 border-2 border-green-400 rounded-full transition duration-300" href="#">Customer success</a></div>
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-wrap">
+                  <div class="flex items-center w-full h-16 px-8 py-6 border-b border-gray-900">
+                    <p class="min-w-max text-sm text-gray-300 font-medium">Commitment</p>
+                  </div>
+                  <div x-show="active === 'marketing' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Full Time</p>
+                  </div>
+                  <div x-show="active === 'customer-success' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Part Time</p>
+                  </div>
+                  <div x-show="active === 'marketing' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Part Time</p>
+                  </div>
+                  <div x-show="active === 'software-engineering' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Freelance</p>
+                  </div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Full Time</p>
+                  </div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Full Time</p>
+                  </div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Full Time</p>
+                  </div>
+                  <div x-show="showContent &amp;&amp; active === 'customer-success' || showContent &amp;&amp; active === 'all'" class="visibility-item flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Full Time</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-wrap">
+                  <div class="flex items-center w-full h-16 px-8 py-6 border-b border-gray-900">
+                    <p class="min-w-max text-sm text-gray-300 font-medium">Location</p>
+                  </div>
+                  <div x-show="active === 'marketing' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Los Angeles</p>
+                  </div>
+                  <div x-show="active === 'customer-success' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Miami</p>
+                  </div>
+                  <div x-show="active === 'marketing' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Los Angeles</p>
+                  </div>
+                  <div x-show="active === 'software-engineering' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Los Angeles</p>
+                  </div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Los Angeles</p>
+                  </div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Los Angeles</p>
+                  </div>
+                  <div x-show="active === 'design' || active === 'all'" class="flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Los Angeles</p>
+                  </div>
+                  <div x-show="showContent &amp;&amp; active === 'customer-success' || showContent &amp;&amp; active === 'all'" class="visibility-item flex items-center w-full h-20 px-8 py-5 border-b border-gray-900">
+                    <p class="min-w-max text-white">Los Angeles</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div x-show="!showContent" class="flex flex-wrap justify-center max-w-xs mx-auto mb-6">
+            <div class="w-full">
+              <a x-on:click.prevent="showContent = true" class="block px-14 py-4 text-center font-medium tracking-2xl border-2 border-green-400 bg-green-400 hover:bg-green-500 text-black focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-full transition duration-300" href="#">See all positions</a>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section class="py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="md:max-w-4xl text-center mx-auto mb-20">
+            <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Nightsable Card</span>
+            <h2 class="font-heading text-7xl lg:text-8xl text-white tracking-7xl lg:tracking-8xl">Open positions</h2>
+          </div>
+          <div class="relative max-w-5xl mx-auto">
+            <h3 class="mb-6 text-2xl text-white tracking-2xl">Design (2)</h3>
+            <div class="flex flex-wrap -m-2 mb-8">
+              <div class="w-full p-2">
+                <div class="px-12 py-9 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center justify-between">
+                    <div class="w-auto p-2">
+                      <ul class="flex flex-wrap -m-2 mb-2">
+                        <li class="flex items-center p-2">
+                          <span class="mr-4 text-sm text-gray-300">Miami</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex items-center p-2">
+                          <span class="text-sm text-gray-300">Full Time</span>
+                        </li>
+                      </ul>
+                      <a class="group inline-block" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Senior Product Designer</h3>
+                      </a>
+                    </div>
+                    <div class="w-auto p-2">
+                      <div class="flex flex-wrap items-center -m-3">
+                        <div class="w-auto p-3"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a></div>
+                        <div class="w-auto p-3">
+                          <a class="inline-block" href="#">
+                            <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.79688 17.4301L13.5019 11.7251C14.1756 11.0513 14.1756 9.94882 13.5019 9.27507L7.79688 3.57007" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full p-2">
+                <div class="px-12 py-9 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center justify-between">
+                    <div class="w-auto p-2">
+                      <ul class="flex flex-wrap -m-2 mb-2">
+                        <li class="flex items-center p-2">
+                          <span class="mr-4 text-sm text-gray-300">Miami</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex items-center p-2">
+                          <span class="text-sm text-gray-300">Full Time</span>
+                        </li>
+                      </ul>
+                      <a class="group inline-block" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Produt Designer</h3>
+                      </a>
+                    </div>
+                    <div class="w-auto p-2">
+                      <div class="flex flex-wrap items-center -m-3">
+                        <div class="w-auto p-3"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a></div>
+                        <div class="w-auto p-3">
+                          <a class="inline-block" href="#">
+                            <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.79688 17.4301L13.5019 11.7251C14.1756 11.0513 14.1756 9.94882 13.5019 9.27507L7.79688 3.57007" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="mb-6 text-2xl text-white tracking-2xl">Marketing (2)</h3>
+            <div class="flex flex-wrap -m-2">
+              <div class="w-full p-2">
+                <div class="px-12 py-9 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center justify-between">
+                    <div class="w-auto p-2">
+                      <ul class="flex flex-wrap -m-2 mb-2">
+                        <li class="flex items-center p-2">
+                          <span class="mr-4 text-sm text-gray-300">Miami</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex items-center p-2">
+                          <span class="text-sm text-gray-300">Full Time</span>
+                        </li>
+                      </ul>
+                      <a class="group inline-block" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Customer Success Manager</h3>
+                      </a>
+                    </div>
+                    <div class="w-auto p-2">
+                      <div class="flex flex-wrap items-center -m-3">
+                        <div class="w-auto p-3"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a></div>
+                        <div class="w-auto p-3">
+                          <a class="inline-block" href="#">
+                            <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.79688 17.4301L13.5019 11.7251C14.1756 11.0513 14.1756 9.94882 13.5019 9.27507L7.79688 3.57007" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full p-2">
+                <div class="px-12 py-9 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center justify-between">
+                    <div class="w-auto p-2">
+                      <ul class="flex flex-wrap -m-2 mb-2">
+                        <li class="flex items-center p-2">
+                          <span class="mr-4 text-sm text-gray-300">Miami</span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex items-center p-2">
+                          <span class="text-sm text-gray-300">Full Time</span>
+                        </li>
+                      </ul>
+                      <a class="group inline-block" href="#">
+                        <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Product Manager, Instagram Camera</h3>
+                      </a>
+                    </div>
+                    <div class="w-auto p-2">
+                      <div class="flex flex-wrap items-center -m-3">
+                        <div class="w-auto p-3"><a class="inline-block py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a></div>
+                        <div class="w-auto p-3">
+                          <a class="inline-block" href="#">
+                            <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.79688 17.4301L13.5019 11.7251C14.1756 11.0513 14.1756 9.94882 13.5019 9.27507L7.79688 3.57007" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section x-data="{ slideWidth: 0, activeSlide: 0, slideCount: 3 }" class="relative py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="mb-20 md:max-w-xl text-center mx-auto">
+            <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Nightsable Card</span>
+            <h2 class="font-heading text-7xl lg:text-8xl text-white tracking-7xl lg:tracking-8xl">Open positions</h2>
+          </div>
+        </div>
+        <div class="mb-16 overflow-hidden">
+          <div :style="'transform: translateX(-' + slideWidth + 'px)'" class="flex transition-transform duration-500 ease-in-out">
+            <div x-ref="slide1" class="flex-shrink-0 w-full">
+              <div class="flex flex-wrap justify-between px-6 -m-5 lg:-m-10">
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Product Manager, Instagram Camera</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Designer</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Senior Product Designer</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Customer Success Manager</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div x-ref="slide2" class="flex-shrink-0 w-full">
+              <div class="flex flex-wrap justify-between px-6 -m-5 lg:-m-10">
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Software engineering</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Backend Developer</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Senior Product Designer</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Customer Success Manager</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div x-ref="slide3" class="flex-shrink-0 w-full">
+              <div class="flex flex-wrap justify-between px-6 -m-5 lg:-m-10">
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Product Manager, Instagram Camera</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Senior Product Designer</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 p-5 lg:p-10">
+                  <div class="relative text-center h-full px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                    <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                    <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                      <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Customer Success Manager</h3>
+                    </a>
+                    <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="mr-4 text-white">Miami</span>
+                        <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                        </svg>
+                      </li>
+                      <li class="flex flex-wrap items-center p-2">
+                        <span class="text-white">Full Time</span>
+                      </li>
+                    </ul>
+                    <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center -m-4">
+          <div class="w-auto p-4">
+            <a x-on:click.prevent="activeSlide &gt; 0 ? (activeSlide -= 1, slideWidth -= $refs['slide' + (activeSlide + 1)].offsetWidth) : null" class="flex items-center justify-center hover:bg-gray-400 border border-gray-900 rounded-full transition duration-300" href="#" style="width: 87px; height: 87px;">
+              <svg width="10" height="17" viewbox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.20312 15.4298L2.49812 9.72482C1.82437 9.05107 1.82437 7.94857 2.49812 7.27482L8.20312 1.56982" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="w-auto p-4">
+            <a x-on:click.prevent="activeSlide &lt; slideCount - 1 ? (activeSlide += 1, slideWidth += $refs['slide' + activeSlide].offsetWidth) : activeSlide = slideCount - 1" class="flex items-center justify-center hover:bg-gray-400 border border-gray-900 rounded-full transition duration-300" href="#" style="width: 87px; height: 87px;">
+              <svg width="10" height="17" viewbox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.79688 15.4298L7.50188 9.72482C8.17563 9.05107 8.17563 7.94857 7.50188 7.27482L1.79688 1.56982" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+                
+      <section x-data="{ showContent: false }" class="relative py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="mb-20 md:max-w-xl text-center mx-auto">
+            <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Nightsable Card</span>
+            <h2 class="font-heading text-7xl lg:text-8xl text-white tracking-7xl lg:tracking-8xl">Open positions</h2>
+          </div>
+          <div class="flex flex-wrap -m-4 mb-10">
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Product Manager, Instagram Camera</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Senior Product Designer</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Customer Success Manager</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Product Manager, Instagram Camera</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Design</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Senior Product Designer</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Marketing</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Customer Success Manager</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+            <div :class="{ 'hidden': !showContent }" class="hidden w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Software engineering</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Backend Developer</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+            <div :class="{ 'hidden': !showContent }" class="hidden w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Software engineering</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Backend Developer</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+            <div :class="{ 'hidden': !showContent }" class="hidden w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="relative h-full text-center px-11 py-14 overflow-hidden border border-gray-900 rounded-5xl">
+                <a class="inline-block mb-4 py-3 px-4 text-xs text-green-400 hover:text-black font-medium hover:bg-green-400 uppercase border-2 border-green-400 rounded-full transition duration-300" href="#">Software engineering</a>
+                <a class="group block mb-40 max-w-xs mx-auto" href="#">
+                  <h3 class="text-3xl text-white tracking-3xl group-hover:underline">Frontend Developer</h3>
+                </a>
+                <ul class="relative z-10 flex flex-wrap justify-center -m-2">
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="mr-4 text-white">Miami</span>
+                    <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="white"></path>
+                    </svg>
+                  </li>
+                  <li class="flex flex-wrap items-center p-2">
+                    <span class="text-white">Full Time</span>
+                  </li>
+                </ul>
+                <img class="absolute bottom-0 right-0" src="nightsable-assets/images/career/shadow2.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div :class="{ 'hidden': showContent }" class="flex flex-wrap justify-center max-w-xs mx-auto mb-6">
+            <div class="w-full">
+              <a x-on:click.prevent="showContent = true" class="block px-14 py-4 text-center font-medium tracking-2xl border-2 border-green-400 bg-green-400 hover:bg-green-500 text-black focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-full transition duration-300" href="#">See all positions</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+</body>
+</html>
+

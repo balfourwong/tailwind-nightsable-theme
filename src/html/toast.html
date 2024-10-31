@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,300,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+                
+      <div class="z-50 fixed left-0 bottom-0 w-full pb-10 px-4">
+        <div class="flex items-center p-4 px-9 max-w-max mx-auto rounded-full" style="background-color: #00AC26;">
+          <img class="mr-4" src="nightsable-assets/images/toast/check-icon.svg" alt="">
+          <span class="text-white">Your settings have been saved</span>
+        </div>
+      </div>
+                
+      <div class="z-50 fixed left-0 bottom-0 w-full pb-10 px-4">
+        <div class="flex items-center p-4 px-9 bg-gray-600 max-w-max mx-auto rounded-full">
+          <img class="mr-4" src="nightsable-assets/images/toast/warning-icon.svg" alt="">
+          <span class="text-white">Please check your email to confirm your address befere you can see that</span>
+        </div>
+      </div>
+                
+      <div x-data="{ modal: true }" :class="{ 'hidden': !modal }" class="z-50 fixed left-0 bottom-0 w-full pb-10 px-4">
+        <div class="flex items-center p-4 px-9 bg-red-500 max-w-max mx-auto rounded-full">
+          <a x-on:click.prevent="modal = false" href="#">
+            <img class="mr-4" src="nightsable-assets/images/toast/close-circle.svg" alt="">
+          </a>
+          <span class="text-white">Please check your email to confirm your address befere you can see that</span>
+        </div>
+      </div>
+                
+      <div x-data="{ modal: true }" :class="{ 'hidden': !modal }" class="z-50 fixed left-0 bottom-0 w-full pb-10 px-4">
+        <div class="flex items-center p-4 px-9 bg-black max-w-max mx-auto rounded-full">
+          <span class="mr-4 text-white">Your settings have been saved</span>
+          <a x-on:click.prevent="modal = false" href="#">
+            <img src="nightsable-assets/images/toast/close-icon.png" alt="">
+          </a>
+        </div>
+      </div>
+                
+      <section x-data="{ modal: true }" :class="{ 'hidden': !modal }" class="z-50 fixed bottom-0 left-0 w-full p-4">
+        <div class="p-8 bg-black mx-auto max-w-3xl rounded-5xl">
+          <div class="flex flex-wrap -m-2">
+            <div class="flex-1 p-2">
+              <h3 class="mb-2 text-white font-medium">Your settings have been saved</h3>
+              <p class="text-sm text-gray-300">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too</p>
+            </div>
+            <div class="w-auto p-2">
+              <a x-on:click.prevent="modal = false" href="#">
+                <img class="ml-auto" src="nightsable-assets/images/toast/close-icon.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+</body>
+</html>
+
